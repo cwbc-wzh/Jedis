@@ -19,6 +19,12 @@ public class JedisTest {
     public void test1() {
         Jedis jedis = JedisPoolUtils.getJedis();
         jedis.set("password","123456");
+        System.out.println(jedis.get("password"));
+    }
+    @Test
+    public void test2(){
+        Jedis jedis = JedisPoolUtils.getJedis();
+        jedis.set("username", "123");
         System.out.println(jedis.get("username"));
     }
 }
